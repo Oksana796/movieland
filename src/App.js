@@ -3,7 +3,7 @@ import "./App.css";
 import SearchIcon from "./search.svg";
 import MovieCard from "./components/MovieCard";
 
-const API_URL = "http://www.omdbapi.com/?apikey=726dc933";
+const API_URL = "https://www.omdbapi.com/?apikey=726dc933";
 
 //const movie1 = {
 //Title: "Superman, Spiderman or Batman",
@@ -25,7 +25,7 @@ function App() {
   };
 
   useEffect(() => {
-    searchMovie("Spiderman");
+    searchMovie("Sun");
   }, []);
 
   return (
