@@ -17,6 +17,11 @@ const API_URL = "https://www.omdbapi.com/?apikey=726dc933";
 function App() {
   const [movies, setMovies] = useState([]);
   const [searchName, setSearchName] = useState("");
+  const [lightMode, setLightMode] = useState(false)
+
+  const toggleLightMode=()=> {
+    setLightMode(prevMode=> !prevMode)
+  }
 
   const searchMovie = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
@@ -29,7 +34,16 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
+    <div  className=  {lightMode ? 'app light' : 'app'} >
+
+      <div className="toggler">
+        <p className="toggler--light">Light</p>
+        <div className="toggler--slider" onClick={toggleLightMode} >
+          <div className="toggler--slider--circle"></div>
+        </div>
+        <p className="toggler--dark">Dark</p>
+      </div>
+
       <h1>MovieLand</h1>
 
       <div className="search">

@@ -14,25 +14,94 @@
 
 body {
   font-family: var(--font-roboto);
-  background-color: #2b3034;
+  background-color: rgb(206, 201, 201);
 }
 
 .app {
   padding: 4rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #2B3034;
+
 }
+
+.toggler {
+  display: flex;
+  align-items: center;
+  margin-left: 70%;
+  margin-bottom:5%;
+  
+}
+
+.toggler--slider {
+  width: 30px;
+  height: 15px;
+  background-color: white;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px solid white;
+  box-sizing: content-box;
+}
+.light .toggler--slider {
+    border: 1px solid black;
+    background-color: black;
+}
+.toggler--slider--circle {
+  height: 15px;
+  width: 15px;
+  background-color: black;
+ 
+  border-radius: 50%;
+}
+.light .toggler--slider--circle {
+    background-color: white;
+    
+}
+.toggler--dark {
+  color:rgb(103, 83, 83);  /*word*/
+  font-weight: 900;
+  font-size: 1rem;
+}
+.light .toggler--light {
+    color: #acacaf;
+}
+.toggler--light {
+  color: #9d97b0; 
+  font-weight: 600; /*word*/
+}
+.light .toggler-dark {
+    color: white;
+}
+.light .toggler--slider {
+    justify-content: flex-start;
+   
+}
+.light {
+  background-color: rgb(249, 250, 245);
+}
+.light h1 {
+  background-color:rgb(103, 83, 83)
+}
+
+
+
+
+
+
 
 h1 {
   font-size: 4rem;
   letter-spacing: 0.9px;
   background: linear-gradient(
     90deg,
-    rgba(249, 211, 180, 1) 0%,
-    rgba(249, 211, 180, 0) 100%
+    rgb(247, 208, 177) 0%,
+    rgba(163, 161, 161, 0) 110%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -41,14 +110,14 @@ h1 {
 }
 
 .search {
-  width: 71%;
+  width: 60%;
   margin: 4rem 0 2rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 1.5rem 1.75rem;
+  padding: 1.75rem 1.75rem;
   border-radius: 3rem;
   background: #1f2123;
   -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
@@ -194,15 +263,22 @@ h1 {
     width: 20px;
     height: 20px;
   }
+  
 }
 
 @media screen and (max-width: 400px) {
   .app {
     padding: 4rem 1rem;
   }
+  .toggler p {
+    font-size: 0.7rem;
+  }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+  .search {
+    width: 70%;
   }
 
   .container {
